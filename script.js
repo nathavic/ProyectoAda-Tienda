@@ -1,5 +1,7 @@
 console.log("Hola Male!");
 
+// PRODUCTOS
+
 // // TARJETAS:
 const productCard = document.querySelectorAll(".product__card");
 
@@ -155,3 +157,4 @@ const allFilterCard = () => {
     }
   }
 };
+

@@ -553,22 +553,6 @@ footer {
 }
 
 
-/************ RESPONSIVE ***********/
-
-
-.checkout__container {
-  display: flex;
-}
-
-.product___container .product__card.hidden {
-  display: none;
-}
-
-.filter__main.open,
-.cart.open {
-  transform: translateX(0%);
-}
-
 /************ 
 MEDIA QUERY  ************/
 
