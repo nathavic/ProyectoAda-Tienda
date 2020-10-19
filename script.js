@@ -9,10 +9,10 @@ const productCard = document.querySelectorAll(".product__card");
 const searchFilter = document.querySelector(".search-input");
 
 // // CATEGORIA:
-const categoryFilter = document.querySelectorAll(".search-checkbox");
+const categoryFilter = document.querySelectorAll(".search-category");
 
 // // PUNTAJE:
-const reviewFilter = document.querySelectorAll(".search-stars");
+const reviewFilter = document.querySelectorAll(".search-review");
 
 // FILTROS:
 
@@ -156,5 +156,41 @@ const allFilterCard = () => {
       hide(card);
     }
   }
+};
+
+// borrar:
+
+
+
+
+// GRILLA Y LISTA
+
+const showList = document.getElementById("show__list");
+const showGrid = document.getElementById("show__grid");
+// LISTAS DE PRODUCTOS
+const productContainer = document.querySelectorAll(".product__description");
+// TARJETAS DE PRODUCTOS
+const productContent = document.querySelectorAll(".product__content");
+
+
+
+
+// ABRIR y CERRAR CARRITO
+
+const openCart = document.querySelectorAll(".shopcart__btn")
+const closeCart = document.querySelectorAll(".close__cart");
+const shopCart = document.getElementById("shopcart");
+const overlay = document.querySelector(".overlay");
+
+openCart.onclick = () => {
+  overlay.classList.remove("hidden");
+  document.body.classList.add("no-scroll");
+  shopcart.classList.add("show_cart");
+};
+
+closeCart.onclick = () => {
+  overlay.classList.add("hidden");
+  document.body.classList.remove("no-scroll");
+  shopcart.classList.remove("show_cart");
 };
 
