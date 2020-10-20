@@ -1,22 +1,20 @@
 console.log("Hola Male!");
 
-// PRODUCTOS
+//******** FILTRO PRODUCTOS ******** //
 
-// // TARJETAS:
+// // Card:
 const productCard = document.querySelectorAll(".product__card");
 
-// // BUSQUEDAS:
+// // Search:
 const searchFilter = document.querySelector(".search-input");
 
-// // CATEGORIA:
+// // Category:
 const categoryFilter = document.querySelectorAll(".search-category");
 
-// // PUNTAJE:
+// // Review:
 const reviewFilter = document.querySelectorAll(".search-review");
 
-// FILTROS:
-
-// input:
+// By Name:
 
 searchFilter.oninput = () => {
   allFilterCard();
@@ -31,7 +29,10 @@ const inputSearchOk = () => {
 };
 
 const compareInputCard = (card) => {
-  if (card.dataset.name.includes(searchFilter.value.toLowerCase())) {
+  const productName = card.dataset.name.toLowerCase();
+  const productSerach = searchFilter.value.toLowerCase();
+
+  if (productName.includes(productSerach)) {
     return true;
   } else {
     return false;
@@ -50,7 +51,7 @@ const filterInput = (card) => {
   }
 };
 
-// category:
+// By Category:
 
 for (let checkbox of categoryFilter) {
   checkbox.oninput = () => {
@@ -90,7 +91,7 @@ const allFilterCategory = (card) => {
   }
 };
 
-//review:
+// By Review:
 
 for (let checkbox of reviewFilter) {
   checkbox.oninput = () => {
@@ -130,7 +131,7 @@ const allFilterReview = (card) => {
   }
 };
 
-// accion:
+// Action:
 
 const filterTotal = (card) => {
   if (filterInput(card) && allFilterReview(card) && allFilterCategory(card)) {
@@ -158,26 +159,50 @@ const allFilterCard = () => {
   }
 };
 
-// borrar:
+// Clear Filter:
 
+const clearFilter = document.querySelector(".filter__trash");
 
+clearFilter.onclick = () => {
+  searchFilter.value = "";
+  for (let card of productCard) {
+    card.classList.remove("hidden");
+  }
+  for (let checkbox of categoryFilter) {
+    checkbox.checked = false;
+  }
+  for (let checkbox of reviewFilter) {
+    checkbox.checked = false;
+  }
+};
 
+//******** GRID AND LIST ******** //
 
-// GRILLA Y LISTA
-
+// List :
 const showList = document.getElementById("show__list");
+
+// Grid:
 const showGrid = document.getElementById("show__grid");
-// LISTAS DE PRODUCTOS
-const productContainer = document.querySelectorAll(".product__description");
-// TARJETAS DE PRODUCTOS
-const productContent = document.querySelectorAll(".product__content");
 
+// Products Container:
+const productContainer = document.querySelector(".product__container");
 
+// Action: 
+
+showList.onclick = () => {
+  productContainer.classList.remove("grid");
+  productContainer.classList.add("list");
+};
+
+showGrid.onclick = () => {
+  productContainer.classList.remove("list");
+  productContainer.classList.add("grid");
+};
 
 
 // ABRIR y CERRAR CARRITO
 
-const openCart = document.querySelectorAll(".shopcart__btn")
+const openCart = document.querySelectorAll(".shopcart__btn");
 const closeCart = document.querySelectorAll(".close__cart");
 const shopCart = document.getElementById("shopcart");
 const overlay = document.querySelector(".overlay");
@@ -193,4 +218,3 @@ closeCart.onclick = () => {
   document.body.classList.remove("no-scroll");
   shopcart.classList.remove("show_cart");
 };
-
