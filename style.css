@@ -239,6 +239,7 @@ footer {
   padding: 25px 25px;
   text-align: center;
   margin: 10px;
+  transition: 0.1s;
 }
 
 .product__card:hover {
@@ -286,6 +287,7 @@ footer {
 
 /* List */
 
+
 .list {
   display: block;
 }
@@ -305,7 +307,7 @@ footer {
   align-items: center;
   margin: 10px;
   padding: 10px;
-  transition: .2s ease-out; 
+  transition: 0.1s;
 }
 
 .list .product__card > .img__container {
