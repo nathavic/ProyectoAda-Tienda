@@ -206,7 +206,7 @@ const openCart = document.getElementById("open");
 const closeCart = document.getElementById("close");
 
 // Aside Cart
-const asideCart = document.querySelector(".added__container");
+const asideCart = document.querySelector(".shopcart__container");
 
 // Overlay
 const overlay = document.querySelectorAll("overlay");
