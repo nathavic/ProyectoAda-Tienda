@@ -187,7 +187,7 @@ const showGrid = document.getElementById("show__grid");
 // Products Container:
 const productContainer = document.querySelector(".product__container");
 
-// Action: 
+// Action:
 
 showList.onclick = () => {
   productContainer.classList.remove("grid");
@@ -199,22 +199,30 @@ showGrid.onclick = () => {
   productContainer.classList.add("grid");
 };
 
+//******** OPEN AND CLOSE CART ******** //
 
-// ABRIR y CERRAR CARRITO
+// Open n Close
+const openCart = document.getElementById("open");
+const closeCart = document.getElementById("close");
 
-const openCart = document.querySelectorAll(".shopcart__btn");
-const closeCart = document.querySelectorAll(".close__cart");
-const shopCart = document.getElementById("shopcart");
-const overlay = document.querySelector(".overlay");
+// Aside Cart
+const asideCart = document.querySelector(".added__container");
 
+// Overlay
+const overlay = document.querySelectorAll("overlay");
+
+// Action:
 openCart.onclick = () => {
-  overlay.classList.remove("hidden");
-  document.body.classList.add("no-scroll");
-  shopcart.classList.add("show_cart");
+  // overlay.classList.remove("hidden");
+  // document.body.classList.add("no-scroll");
+  // asideCart.classList.add("show-cart");
+ return true
 };
+
+console.log(openCart)
 
 closeCart.onclick = () => {
   overlay.classList.add("hidden");
   document.body.classList.remove("no-scroll");
-  shopcart.classList.remove("show_cart");
+  asideCart.classList.remove("show-cart");
 };
