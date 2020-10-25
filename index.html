@@ -1,994 +1,670 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link rel="shortcut icon" type="img/ico" href="img/favicon.ico">
-    <link rel="stylesheet" href="style.css" />
-    <title>Sex Shop Ada</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="shortcut icon" type="img/ico" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  <title>Sex Shop Ada</title>
+</head>
 
-    <!-- *** Header *** -->
+<body>
 
-    <header class="header__container">
-      <div class="header__card">
-        <div class="header__logo">
-          <img
-            src="img/logo_img.svg"
-            alt="Logo de la Tienda"
-            aria-hidden="true"
-            class="logo"
-            />
-          <p class="header__title">SEX SHOP ADA</p>
-        </div>
-        <div class="shopcart__open">
-          <button
-            type="button"
-            class="open"
-            id="open focuseable"
-            aria-label="ver carrito"
-            aria-expanded="false"
-            aria-controls="shopping cart"
-            tabindex="0">
-            <i class="fas fa-shopping-bag" aria-hidden="true"> </i>
-            (<span id="shopcart__items" aria-hidden="true">0</span> items)
+  <!-- *** Header *** -->
+
+  <header class="header__container">
+    <div class="header__card">
+      <div class="header__logo">
+        <img src="img/logo_img.svg" alt="Logo de la Tienda" aria-hidden="true" class="logo" />
+        <p class="header__title">SEX SHOP ADA</p>
+      </div>
+      <div class="shopcart__open">
+        <button type="button" class="open" id="open focuseable" aria-label="ver carrito" aria-expanded="false"
+          aria-controls="shopping cart" tabindex="0">
+          <i class="fas fa-shopping-bag" aria-hidden="true"> </i>
+          (<span id="shopcart__items" aria-hidden="true">0</span> items)
+        </button>
+      </div>
+    </div>
+
+    <!-- *** Banner *** -->
+
+    <div class="header__banner">
+      <h1 class="banner__tittle">SEX TOYS ADA</h1>
+    </div>
+  </header>
+
+  <!-- Main Page -->
+
+  <main>
+    <!-- *** Filters  *** -->
+
+    <aside class="filter__aside" aria-labelledby="filtros">
+
+      <!-- Button Close -->
+      <div class="filter__close">
+        <button type="button" class="close__btn" id="close__btn" aria-label="Cerrar los filtros" tabindex="0">
+          <i class="fas fa-times" id="close__btn" aria-hidden="true"></i>
+        </button>
+      </div>
+
+
+      <div class="filter__container">
+        <div class="filter__title">
+          <h2>FILTROS</h2>
+          <button type="button" class="filter__trash focuseable" tabindex="0">
+            <i class="fas fa-trash-alt" aria-hidden="true"></i> Limpiar
           </button>
         </div>
       </div>
 
-      <!-- *** Banner *** -->
+      <!-- *** Search Input By Name *** -->
 
-      <div class="header__banner">
-        <h1 class="banner__tittle">SEX TOYS ADA</h1>
+      <div class="filter__container">
+        <h3>BÚSQUEDA</h3>
+        <label class="filter__search focuseable" aria-label="Búsqueda">
+          <input type="text" class="search-input focuseable" name="Búsqueda" aria-controls="procurar por nombre"
+            tabindex="0" placeholder="Buscar productos" />
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </label>
       </div>
-    </header>
 
-    <!-- Main Page -->
+      <!-- *** Search Checkbox by Name *** -->
 
-    <main>
-      <!-- *** Filters  *** -->
+      <div class="filter__container">
+        <h3 class="category__title">CATEGORÍA</h3>
+        <label>
+          <input type="checkbox" value="vibros" tabindex="0" class="search-category focuseable" />
+          VIBROS
+        </label>
+        <label>
+          <input type="checkbox" value="dildos" tabindex="0" class="search-category focuseable" />
+          DILDOS
+        </label>
+        <label>
+          <input type="checkbox" value="lubs" tabindex="0" class="search-category focuseable" />
+          LUBS
+        </label>
+        <label>
+          <input type="checkbox" value="plugs" tabindex="0" class="search-category focuseable" />
+          PLUGS
+        </label>
+        <label>
+          <input type="checkbox" value="strapon" tabindex="0" class="search-category focuseable" />
+          STRAPON
+        </label>
+      </div>
 
-      <aside class="filter__aside" aria-labelledby="filtros">
+      <!-- *** Search Checkbox by Stars  *** -->
 
- <!-- Button Close -->
- <div class="filter__close">
-            <button
-              type="button"
-              class="close__btn"
-              id="close__btn"
-              aria-label="Cerrar los filtros"
-              tabindex="0"
-            >
-              <i class="fas fa-times" 
-             id="close__btn"
-              aria-hidden="true"></i>
-            </button> 
+      <div class="filter__container">
+        <h3 class="review__title">PUNTAJE</h3>
+        <label>
+          <input type="checkbox" name="review focuseable" class="filter search-review" value="5" tabindex="0" />
+          <div class="review">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
           </div>
-    
-
-        <div class="filter__container">
-          <div class="filter__title">
-            <h2>FILTROS</h2>
-            <button type="button" class="filter__trash focuseable" tabindex="0">
-              <i class="fas fa-trash-alt" aria-hidden="true"></i> Limpiar
-            </button>
+          (5)
+        </label>
+        <label>
+          <input type="checkbox" name="review focuseable" class="filter search-review" value="4" tabindex="0" />
+          <div class="review">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
           </div>
+          (4)
+        </label>
+        <label>
+          <input type="checkbox" name="review focuseable" class="filter search-review" value="3" tabindex="0" />
+          <div class="review">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+          </div>
+          (3)
+        </label>
+        <label>
+          <input type="checkbox" name="review focuseable" class="filter search-review" value="2" tabindex="0" />
+          <div class="review">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+          </div>
+          (2)
+        </label>
+        <label>
+          <input type="checkbox" name="review focuseable" class="filter search-review" value="1" tabindex="0" />
+          <div class="review">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+            <i class="far fa-star" aria-hidden="true"></i>
+          </div>
+          (1)
+        </label>
+    </aside>
+
+    <!-- *** Filter *** -->
+
+    <section>
+      <header class="filter__header">
+
+        <p>Mostrando <span id="product__qty" aria-live="polite"> 12 </span>
+          producto(s) de 12.</p>
+
+        <button type="button" class="open__filter" aria-label="abrir filtros" aria-expanded="false"
+          aria-controls="procurar por filtros" tabindex="0">
+          <i class="fas fa-filter" aria-hidden="true"></i>
+          Filtros
+        </button>
+
+        <!-- *** Grid and List  *** -->
+
+        <div class="list__grid">
+          Ver como
+          <button type="button" class="view__change focuseable" id="show__grid"
+            aria-label="Mostrar productos como grilla" tabindex="0">
+            <i class="fas fa-th" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="view__change focuseable" id="show__list"
+            aria-label="Mostrar productos como lista" tabindex="0">
+            <i class="fas fa-list" aria-hidden="true"></i>
+          </button>
         </div>
+      </header>
 
-        <!-- *** Search Input By Name *** -->
+      <!-- *** Product All Container *** -->
 
-        <div class="filter__container">
-          <h3>BÚSQUEDA</h3>
-          <label class="filter__search focuseable" aria-label="Búsqueda">
-            <input
-              type="text"
-              class="search-input focuseable"
-              name="Búsqueda"
-              aria-controls="procurar por nombre"
-              tabindex="0"
-              placeholder="Buscar productos"
-              />
-            <i class="fas fa-search" aria-hidden="true"></i>
-          </label>
-        </div>
-
-        <!-- *** Search Checkbox by Name *** -->
-
-        <div class="filter__container">
-          <h3 class="category__title">CATEGORÍA</h3>
-          <label>
-            <input
-              type="checkbox"
-              value="vibros"
-              tabindex="0"
-              class="search-category focuseable"
-              />
-            VIBROS
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value="dildos"
-              tabindex="0"
-              class="search-category focuseable"
-              />
-            DILDOS
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value="lubs"
-              tabindex="0"
-              class="search-category focuseable"
-              />
-            LUBS
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value="plugs"
-              tabindex="0"
-              class="search-category focuseable"
-              />
-            PLUGS
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value="strapon"
-              tabindex="0"
-              class="search-category focuseable"
-              />
-            STRAPON
-          </label>
-        </div>
-
-        <!-- *** Search Checkbox by Stars  *** -->
-
-        <div class="filter__container">
-          <h3 class="review__title">PUNTAJE</h3>
-          <label>
-            <input
-              type="checkbox"
-              name="review focuseable"
-              class="filter search-review"
-              value="5"
-              tabindex="0"
-              />
-            <div class="review">
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-            </div>
-            (5)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="review focuseable"
-              class="filter search-review"
-              value="4"
-              tabindex="0"
-              />
-            <div class="review">
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-            </div>
-            (4)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="review focuseable"
-              class="filter search-review"
-              value="3"
-              tabindex="0"
-              />
-            <div class="review">
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-            </div>
-            (3)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="review focuseable"
-              class="filter search-review"
-              value="2"
-              tabindex="0"
-              />
-            <div class="review">
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-            </div>
-            (2)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="review focuseable"
-              class="filter search-review"
-              value="1"
-              tabindex="0"
-              />
-            <div class="review">
-              <i class="fas fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-              <i class="far fa-star" aria-hidden="true"></i>
-            </div>
-            (1)
-          </label>
-        </aside>
-
-        <!-- *** Filter *** -->
-
-        <section>
-          <header class="filter__header">
-
-            <p>Mostrando <span id="product__qty" aria-live="polite"> 12 </span>
-              producto(s) de 12.</p>
-
-            <button
-              type="button"
-              class="open__filter"
-              aria-label="abrir filtros"
-              aria-expanded="false"
-              aria-controls="procurar por filtros"
-              tabindex="0">
-              <i class="fas fa-filter" aria-hidden="true"></i>
-              Filtros
-            </button>
-
-            <!-- *** Grid and List  *** -->
-
-            <div class="list__grid">
-              Ver como
-              <button
-                type="button"
-                class="view__change focuseable" id="show__grid"
-                aria-label="Mostrar productos como grilla"
-                tabindex="0">
-                <i class="fas fa-th" aria-hidden="true"></i>
-              </button>
-              <button
-                type="button"
-                class="view__change focuseable" id="show__list"
-                aria-label="Mostrar productos como lista"
-                tabindex="0">
-                <i class="fas fa-list" aria-hidden="true"></i>
-              </button>
-            </div>
-          </header>
-
-          <!-- *** Product All Container *** -->
-
-          <div class="product__container">
-            <article
-              class="product__card"
-              data-id="0"
-              data-name="Vibro Pulpo"
-              data-category="vibros"
-              data-price="22499"
-              data-image="image/vibro_octopi.jpg"
-              data-review="5">
-              <div class="img__container">
-                <img src="img/vibro_octopi_img.jpg" alt="foto del producto vibro
+      <div class="product__container">
+        <article class="product__card" data-id="0" data-name="Vibro Pulpo" data-category="vibros" data-price="22499"
+          data-image="image/vibro_octopi.jpg" data-review="5">
+          <div class="img__container">
+            <img src="img/vibro_octopi_img.jpg" alt="foto del producto vibro
                   pulpo fundo decorado" class="product__img">
-              </div>
-              <div class="product__content">
-                <h3 class="product__name">Vibro Pulpo</h3>
-                <p class="product__price">$ 22499</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-                <div class="buy__container">
-                  <button
-                    type="button"
-                    tabindex="0"
-                    class="button__style button__buy focuseable">
-                    Comprar
-                  </button>
-                </div>
-              </div>
-            </article>
-          </article>
-          <article
-            class="product__card"
-            data-id="1"
-            data-name="Dildo Limba"
-            data-category="dildos"
-            data-price="59999"
-            data-image="image/dildo_limba.jpg"
-            data-review="3">
-            <div class="img__container">
-              <img src="img/dildo_limba_img.jpg" alt="foto del producto dildo
-                limpa con fundo decorado" class="product__img">
+          </div>
+          <div class="product__content">
+            <h3 class="product__name">Vibro Pulpo</h3>
+            <p class="product__price">$ 22499</p>
+            <p class="product__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quidem perferendis perspiciatis itaque esse tempora sed
+              repellat enim officiis, consectetur sit quia pariatur. Aut
+              enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+            </p>
+            <div class="review">
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
+              <i class="fas fa-star" aria-hidden="true"></i>
             </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Dildo Limba</h3>
-                <p class="product__price">$ 59999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="2"
-            data-name="Vibro Bunny"
-            data-category="vibros"
-            data-price="54999"
-            data-image="image/vidro_bunny.jpg"
-            data-review="3">
-            <div class="img__container">
-              <img src="img/vidro_bunny_img.jpg" alt="foto del producto vibro
-                bunny con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Vibro Bunny</h3>
-                <p class="product__price">$ 54999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="3"
-            data-name="Lubs Hot"
-            data-category="lubs"
-            data-price="24999"
-            data-image="images/lubs_hot.jpg"
-            data-review="2">
-            <div class="img__container">
-              <img src="img/lubs_hot_img.jpg" alt="foto del producto lubs hot
-                con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Lubs Hot</h3>
-                <p class="product__price">$ 24999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="4"
-            data-name="Strapon Beige"
-            data-category="strapon"
-            data-price="46999"
-            data-image="images/switch.jpg"
-            data-review="5">
-            <div class="img__container">
-              <img src="img/strapon_beige_img.jpg" alt="foto del producto
-                strapon beige con fundo branco" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Strapon Beige</h3>
-                <p class="product__price">$ 46999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="5"
-            data-name="Dildo Alpina"
-            data-category="dildos"
-            data-price="32999"
-            data-image="images/dildo_alpina.jpg"
-            data-review="1">
-            <div class="img__container">
-              <img src="img/dildo_alpina_lilac_img.jpg" alt="foto de una mano
-                con el producto dildo alpina con fundo decorado"
-                class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Dildo Alpina</h3>
-                <p class="product__price">$ 32999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="6"
-            data-name="Vibro Bear Egg"
-            data-category="vibros"
-            data-price="37999"
-            data-image="images/vibro_bear_egg.jpg"
-            data-review="3">
-            <div class="img__container">
-              <img src="img/vibro_bear_egg_img.jpg" alt="foto del producot vibro
-                bear egg con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Vibro Bear Egg</h3>
-                <p class="product__price">$ 37999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="7"
-            data-name="Lubs Ooops"
-            data-category="lubs"
-            data-price="11999"
-            data-image="images/lubs_oops.jpg"
-            data-review="2">
-            <div class="img__container">
-              <img src="img/lubs_oops_img.jpg" alt="foto del producto lubs ops
-                con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Lubs Ooops</h3>
-                <p class="product__price">$ 11999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="8"
-            data-name="Vibro Cogumelo"
-            data-category="vibros
-            data-price="119999"
-            data-image="images/vibro_cogumelo.jpg"
-            data-review="4">
-            <div class="img__container">
-              <img src="img/vibro_cogu_img.jpg" alt="foto del producto vibro
-                cogumelo con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Vibro Cogumelo</h3>
-                <p class="product__price">$ 119999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="9"
-            data-name="Strapon Rosa"
-            data-category="strapon"
-            data-price="79999"
-            data-image="images/strapon_rosa.jpg"
-            data-review="3">
-            <div class="img__container">
-              <img src="img/strapon_rosa_img.jpg" alt="foto del producto strapon
-                rosa con fundo branco" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Strapon Rosa</h3>
-                <p class="product__price">$ 79999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="10"
-            data-name="Plug Golden"
-            data-category="plugs"
-            data-price="69999"
-            data-image="images/plug_golden.jpg"
-            data-review="4">
-            <div class="img__container">
-              <img src="img/plug_golden_img.jpg" alt="foto del producto plug
-                golden con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Plug Golden</h3>
-                <p class="product__price">$ 69999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="far fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-          <article
-            class="product__card"
-            data-id="11"
-            data-name="Vibro Body Wand"
-            data-category="vibros"
-            data-price="4999"
-            data-image="images/vibro_body_wand.jpg"
-            data-review="5">
-            <div class="img__container">
-              <img src="img/vibro_body_wand_img.jpg" alt="foto del producto
-                vibro body wand con fundo decorado" class="product__img">
-            </div>
-            <div class="content__container">
-              <div class="product__content">
-                <h3 class="product__name">Vibro Body Wand</h3>
-                <p class="product__price">$ 4999</p>
-                <p class="product__description">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem perferendis perspiciatis itaque esse tempora sed
-                  repellat enim officiis, consectetur sit quia pariatur. Aut
-                  enim dignissimos doloremque culpa tenetur. Possimus, quasi.
-                </p>
-                <div class="review">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-              <div class="buy__container">
-                <button
-                  type="button"
-                  tabindex="0"
-                  class="button__style button__buy focuseable">
-                  Comprar
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <!-- *** Footer **** -->
-
-    <footer>
-      <div class="footer__container">
-        <img
-          src="img/logo_img.svg"
-          aria-hidden="true"
-          class="logo"
-          />
-        <p class="footer__text">TP Ada Tienda : Proyecto 2 - <em>fotos extraídas
-            de: https://shor.by/pantynova </em></p>
-      </div>
-    </footer>
-
-    <!-- *** Shop Cart ***-->
-
-    <button id="open" class="shopcart__aside"><i class="fas fa-shopping-cart" aria-label="carrito" alt="carrito"></i>  Carrito (2 items)</button>
-
-    <div class="overlay hidden" id="overlay"></div>
-    
-      <div class="added__container">
-        <div class="shopcart__top trash__btn">
-          <h2 class="added__title">Carrito</h2>
-          <button id="close" class="fas fa-times" aria-label="cerrar" alt="cerrar"></button>
-        </div>
-        <p>2 producto(s)</p>
-        <div class="qty-container">
-          <section class="qty-products">
-            
-            <div class="added__img">
-              <img src="img/lubs_hot_img.jpg" alt="Lubs Hot" class="shopcart__img"/>
-            </div>
-            <div class="shopcart__content">
-              <div class="added__info">
-                <h3 class="added__name">Lubs Hot</h3><button class="far fa-trash-alt trash" aria-label="excluir" alt="excluir"></button> 
-              </div>
-              <div class="shopcart__bottom trash__btn">
-                <input type="number" min="0" value="1" class="qty-products" tabindex="0"><p>items</p><p>$24999</p>
-              </div>
-            </div>  
-          </section>
-        
-        <button type="button" class="button" id="finish">COMPRAR</button>
-      
-          
-        <button type="button" class="button" id="cancel">CANCELAR</button>
-        
-        </div>
-      </div>
-    <!-- Checkout Info -->
-
-    <div class="overlay-shopcart hidden" id="overlay-shopcart"></div>
-    <section
-      class="shopcart__container hidden"
-      id="shopcart__container"
-      aria-role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-      aria-labelledby="carrito total">
-
-      <div class="shopcart">
-        <h2 id="shopcart__title">Carrito</h2>
-        <div
-          class="checkout__info"
-          aria-role="dialog"
-          aria-modal="true"
-          aria-hidden="true">
-          <form class="payment__info" id="payment__form">
-            <h3 class="info__title">Datos Personales</h3>
-            <label>
-              Nombre y apellido *
-              <input
-                type="text"
-                tabindex="0"
-                placeholder="p. ej.: Ricardo Fort"
-                name="Nombre y Apellido"
-                required
-                />
-            </label>
-            <label>
-              Email *
-              <input
-                type="email"
-                tabindex="0"
-                placeholder="p. ej.: rickfort@gmail.com"
-                required
-                />
-            </label>
-
-            <!-- *** Checkout *** -->
-
-            <h3 class="type__title">Opciones de pago</h3>
-            <label>
-              <input
-                type="radio"
-                name="payment"
-                id="payment"
-                value="cash__debit"
-                checked tabindex="0"
-                />Efectivo / Débito
-            </label>
-
-            <!-- *** Payment *** -->
-
-            <label>
-              <input type="radio" name="payment" id="credit" value="credit"
-                tabindex="0" />Tarjeta
-              de crédito
-            </label>
-            <label>
-              <input type="checkbox" name="deliveryOk" id="delivery"
-                value="delivery" tabindex="0" /> Necesito envío
-            </label>
-            <label>
-              <input type="checkbox" name="discountOk" id="discount"
-                value="discount" tabindex="0" /> Tengo tarjeta de
-              descuento
-            </label>
-       
-
-          <!-- *** Subtotal *** -->
-
-          <div class="checkout__subtotal">
-            <h3 class="subtotal__title">Resumen</h3>
-            <div>
-              <p class="checkout__subtotal">
-                Subtotal <span id="checkout__subtotal"">$</span>
-              </p>
-              <p class="checkout__discount hidden">
-                Descuento 10% <span id="checkout__discount">$</span>
-              </p>
-              <p class="checkout__delivery hidden">
-                Envío <span id="checkout__delivery">$</span>
-              </p>
-              <p class="checkout__tax hidden">
-                Recargo <span id="checkout__tax">$</span>
-              </p>
-              <h2 class="checkout__total">
-                Total: <span id="checkout__total">$</span>
-              </h2>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
             </div>
           </div>
-
-          <!-- *** Total *** -->
-          <footer class="checkout__buy">
-            <button type="button" class="button__style button__cancel"
-              value="keepshop" id="keep" tabindex="0">
-              Seguir comprando
-            </button>
-            <input
-              type="submit"
-              class="finish__btn"
-              tabindex="0"
-              id="finish"
-              value="FINALIZAR"
-              form="payment__info">
-          </footer>
-        </form>
-      </section>
-    </div>
-
-      <!-- *** Empty Cart *** -->
-
-      <div class="overlay__empty hidden" id="overlay__empty">
-
-      <section aria-role="dialog"
-        aria-describedby="carrito esta vacio"
-        aria-hidden="true" id="empty__question" class="empty__question hidden">
-        <article class="empty__shopcart">
-          <p id="empty__ask">
-            Estás por vaciar el carrito, ¿quieres continuar?
-          </p>
-          <footer class="empty__footer">
-            <button
-              type="button"
-              class="button__style button__cancel"
-              id="cancel"
-              tabindex="0">
-              Cancelar
-            </button>
-            <button
-              type="button"
-              class="empty__cart"
-              id="empty"
-              tabindex="0">
-              Vaciar
-            </button>
-          </footer>
         </article>
-      </section>
-    </div>
-
-      <!-- *** Close Cart *** -->
-
-      <div class="overlay hidden" id="overlay">
-
-      <aside id="shopcart__aside" aria-label="Cerrar carrito"
-        aria-hidden="true">
-        <div class="shopcart__close">
-          <h1 class="shopcart__title"> Carrito </h1>
-          <button id="close" tabindex="0" aria-label="cerrar carrito"
-            class="focuseable-shopcart"><i class="fas fa-times"
-              aria-hidden="true"></i></button>
-        </div>
-
-        <!-- *** Products Added Cart *** -->
-
-        <div class="shopcart__products">
-          <div>
-            <p id="product__qty"></p>
-            <div id="products__incart">
+        </article>
+        <article class="product__card" data-id="1" data-name="Dildo Limba" data-category="dildos" data-price="59999"
+          data-image="image/dildo_limba.jpg" data-review="3">
+          <div class="img__container">
+            <img src="img/dildo_limba_img.jpg" alt="foto del producto dildo
+                limpa con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Dildo Limba</h3>
+              <p class="product__price">$ 59999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
             </div>
           </div>
-          <div id="subtotal__buy">
-            <p>Subtotal $<span id="subtotal"></span></p>
-            <button id="finish__btn" tabindex="0" class="focuseable-shopcart">COMPRAR</button>
-            <button id="empty__btn" tabindex="0" class="focuseable-shopcart">VACIAR</button>
+        </article>
+        <article class="product__card" data-id="2" data-name="Vibro Bunny" data-category="vibros" data-price="54999"
+          data-image="image/vidro_bunny.jpg" data-review="3">
+          <div class="img__container">
+            <img src="img/vidro_bunny_img.jpg" alt="foto del producto vibro
+                bunny con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Vibro Bunny</h3>
+              <p class="product__price">$ 54999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="3" data-name="Lubs Hot" data-category="lubs" data-price="24999"
+          data-image="images/lubs_hot.jpg" data-review="2">
+          <div class="img__container">
+            <img src="img/lubs_hot_img.jpg" alt="foto del producto lubs hot
+                con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Lubs Hot</h3>
+              <p class="product__price">$ 24999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="4" data-name="Strapon Beige" data-category="strapon" data-price="46999"
+          data-image="images/switch.jpg" data-review="5">
+          <div class="img__container">
+            <img src="img/strapon_beige_img.jpg" alt="foto del producto
+                strapon beige con fundo branco" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Strapon Beige</h3>
+              <p class="product__price">$ 46999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="5" data-name="Dildo Alpina" data-category="dildos" data-price="32999"
+          data-image="images/dildo_alpina.jpg" data-review="1">
+          <div class="img__container">
+            <img src="img/dildo_alpina_lilac_img.jpg" alt="foto de una mano
+                con el producto dildo alpina con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Dildo Alpina</h3>
+              <p class="product__price">$ 32999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="6" data-name="Vibro Bear Egg" data-category="vibros" data-price="37999"
+          data-image="images/vibro_bear_egg.jpg" data-review="3">
+          <div class="img__container">
+            <img src="img/vibro_bear_egg_img.jpg" alt="foto del producot vibro
+                bear egg con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Vibro Bear Egg</h3>
+              <p class="product__price">$ 37999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="7" data-name="Lubs Ooops" data-category="lubs" data-price="11999"
+          data-image="images/lubs_oops.jpg" data-review="2">
+          <div class="img__container">
+            <img src="img/lubs_oops_img.jpg" alt="foto del producto lubs ops
+                con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Lubs Ooops</h3>
+              <p class="product__price">$ 11999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="8" data-name="Vibro Cogumelo" data-category="vibros" data-price="119999"
+          data-image="images/vibro_cogumelo.jpg" data-review="4">
+          <div class="img__container">
+            <img src="img/vibro_cogu_img.jpg" alt="foto del producto vibro
+                cogumelo con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Vibro Cogumelo</h3>
+              <p class="product__price">$ 119999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="9" data-name="Strapon Rosa" data-category="strapon" data-price="79999"
+          data-image="images/strapon_rosa.jpg" data-review="3">
+          <div class="img__container">
+            <img src="img/strapon_rosa_img.jpg" alt="foto del producto strapon
+                rosa con fundo branco" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Strapon Rosa</h3>
+              <p class="product__price">$ 79999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="10" data-name="Plug Golden" data-category="plugs" data-price="69999"
+          data-image="images/plug_golden.jpg" data-review="4">
+          <div class="img__container">
+            <img src="img/plug_golden_img.jpg" alt="foto del producto plug
+                golden con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Plug Golden</h3>
+              <p class="product__price">$ 69999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="far fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="product__card" data-id="11" data-name="Vibro Body Wand" data-category="vibros" data-price="4999"
+          data-image="images/vibro_body_wand.jpg" data-review="5">
+          <div class="img__container">
+            <img src="img/vibro_body_wand_img.jpg" alt="foto del producto
+                vibro body wand con fundo decorado" class="product__img">
+          </div>
+          <div class="content__container">
+            <div class="product__content">
+              <h3 class="product__name">Vibro Body Wand</h3>
+              <p class="product__price">$ 4999</p>
+              <p class="product__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quidem perferendis perspiciatis itaque esse tempora sed
+                repellat enim officiis, consectetur sit quia pariatur. Aut
+                enim dignissimos doloremque culpa tenetur. Possimus, quasi.
+              </p>
+              <div class="review">
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="buy__container">
+              <button type="button" tabindex="0" class="button__style button__buy focuseable">
+                Comprar
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- *** Footer **** -->
+
+  <footer>
+    <div class="footer__container">
+      <img src="img/logo_img.svg" aria-hidden="true" class="logo" />
+      <p class="footer__text">TP Ada Tienda : Proyecto 2 - <em>fotos extraídas
+          de: https://shor.by/pantynova </em></p>
+    </div>
+  </footer>
+
+  <!-- *** Shop Cart ***-->
+
+  <div class="overlay-checkout hidden" id="overlay-checkout"></div>
+
+  <aside id="shopcart__aside" aria-labelledby="carrito" aria-hidden="false" class="open-cart">
+
+    <div class="shopcart__top">
+
+      <h1 class="shopcart__title"> Carrito </h1>
+      <button id="close" tabindex="0" aria-label="Cerrar carrito" class="focuseable-shopcart"><i class="fas fa-times"
+          aria-hidden="true"></i></button>
+    </div>
+
+    <div class="shopcart__container">
+      <div>
+        <p id="qty-products">2 producto(s) agregado(s)</p>
+
+        <div id="shopcart__added">
+
+          <div data-name="Lubs Hot" class="shopcart__product">
+
+            <div class="shopcart__img">
+
+              <img src="img/lubs_hot_img.jpg" alt="foto del producto lubs hot
+         con fundo decorado" class="added__img">
+            </div>
+
+            <div class="shopcart__content">
+
+              <div class="content__top">
+                <h3>Lubs Hot</h3>
+                <button class="trash__btn focuseable-shopcart" tabindex="0"><i class="far fa-trash-alt trash"
+                    aria-hidden="true"></i></button>
+              </div>
+
+              <div class="content_bottom">
+                <label class="product__unity" for="product-qty">
+                  <input data-price="24999" id="added__qty" class="cart-qty focuseable-shopcart" type="number" min="1"
+                    value="1" tabindex="0">unidades
+                </label>
+
+                <p>$ 24999</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div data-name="Vibro Cogumelo" class="shopcart__product">
+
+            <div class="shopcart__img">
+
+              <img src="img/vibro_cogu_img.jpg" alt="foto del producto vibro cogumelo con fundo decorado" class="added__img">
+            </div>
+
+          </div>
+
+          <div class="shopcart__content">
+            <div class="content__top">
+              <h3>Vibro Cogumelo</h3>
+              <button class="trash__btn focuseable-shopcart" tabindex="0"><i class="far fa-trash-alt trash"
+                  aria-hidden="true"></i></button>
+            </div>
+            <div class="content_bottom">
+              <label class="product__unity" for="product-qty">
+                <input data-price="119999" id="added__qty" class="cart-qty focuseable-shopcart" type="number" min="1"
+                  value="1" tabindex="0">unidades
+              </label>
+              <p>$ 119999</p>
+            </div>
+
           </div>
         </div>
-
-      </aside>
+      </div>
     </div>
-    </body>
 
-    <script src="script.js"></script>
-  </html>
+    <div class="buy__cancel" id="buy__cancel">
+      <p>Subtotal $<span id="subtotal">0</span></p>
+      <button class="buy__btn" id="buy" tabindex="0" class="focuseable-shopcart">COMPRAR</button>
+      <button class="empty__btn" id="empty" tabindex="0" class="focuseable-shopcart">VACIAR</button>
+    </div>
+    </div>
+
+  </aside>
+
+
+
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

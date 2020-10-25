@@ -202,27 +202,26 @@ showGrid.onclick = () => {
 //******** OPEN AND CLOSE CART ******** //
 
 // Open n Close
-const openCart = document.getElementById("open");
+const openCart = document.getElementById("open focuseable");
 const closeCart = document.getElementById("close");
 
 // Aside Cart
-const asideCart = document.querySelector(".shopcart__container");
+const asideCart = document.querySelector(".shopcart__aside");
 
 // Overlay
-const overlay = document.querySelectorAll("overlay");
+const overlayCheckout = document.querySelectorAll("overlay-checkout");
 
 // Action:
 openCart.onclick = () => {
-  // overlay.classList.remove("hidden");
-  // document.body.classList.add("no-scroll");
-  // asideCart.classList.add("show-cart");
- return true
+  overlayCheckout.classList.remove("hidden");
+  document.body.classList.add("no-scroll");
+  asideCart.classList.add("open-cart");
 };
 
 console.log(openCart)
 
 closeCart.onclick = () => {
-  overlay.classList.add("hidden");
+  overlayCheckout.classList.add("hidden");
   document.body.classList.remove("no-scroll");
-  asideCart.classList.remove("show-cart");
+  asideCart.classList.remove("open-cart");
 };
