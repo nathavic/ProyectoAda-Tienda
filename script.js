@@ -203,13 +203,17 @@ showGrid.onclick = () => {
 
 // Open n Close
 const openCart = document.getElementById("open focuseable");
-const closeCart = document.getElementById("close");
+console.log(openCart)
+
+const closeCart = document.getElementById("close-cart");
+console.log(closeCart)
 
 // Aside Cart
-const asideCart = document.querySelector(".shopcart__aside");
+const asideCart = document.getElementById("shopcart__aside");
+console.log(asideCart);
 
 // Overlay
-const overlayCheckout = document.querySelectorAll("overlay-checkout");
+const overlayCheckout = document.querySelector(".overlay-checkout");
 
 // Action:
 openCart.onclick = () => {
@@ -217,8 +221,6 @@ openCart.onclick = () => {
   document.body.classList.add("no-scroll");
   asideCart.classList.add("open-cart");
 };
-
-console.log(openCart)
 
 closeCart.onclick = () => {
   overlayCheckout.classList.add("hidden");
